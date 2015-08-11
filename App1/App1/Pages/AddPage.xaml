@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:BaseSubPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:App1.Pages;assembly=App1"
+             x:Class="App1.Pages.AddPage" Title="New">
+  <Grid VerticalOptions="Center" HorizontalOptions="Center">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="200"></RowDefinition>
+      <RowDefinition Height="200"></RowDefinition>
+      <RowDefinition Height="200"></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="200"></ColumnDefinition>
+      <ColumnDefinition Width="200"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+    <!-- TODO different colors for buttons as a visual aid? -->
+    <Button WidthRequest="195" HeightRequest="195" Grid.Row="0" Grid.Column="0" Text="New 1" BorderRadius="5" BorderWidth="1" Command="{Binding AddFormCommand}"></Button>
+    <Button WidthRequest="195" HeightRequest="195" Grid.Row="0" Grid.Column="1" Text="New 2" BorderWidth="1"></Button>
+    <Button WidthRequest="195" HeightRequest="195" Grid.Row="1" Grid.Column="0" Text="New 3" BorderWidth="1"></Button>
+    <Button WidthRequest="195" HeightRequest="195" Grid.Row="1" Grid.Column="1" Text="New 4" BorderWidth="1"></Button>
+    <Button WidthRequest="195" HeightRequest="195" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Text="New 5" BorderWidth="1" ></Button>
+  </Grid>
+</pages:BaseSubPage>
