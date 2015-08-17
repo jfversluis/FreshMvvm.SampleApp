@@ -1,5 +1,6 @@
 using App1.iOS.CustomRenderers;
 using App1.Pages;
+using System.Drawing;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -33,6 +34,7 @@ namespace App1.iOS.CustomRenderers
             if (!_updatedButtons)
                 MoveButtonToLeft();
 
+            ParentViewController.TabBarController.TabBar.Frame = new RectangleF(0, 719, 1024, 49);
             ParentViewController.TabBarController.TabBar.Hidden = false;
         }
     }

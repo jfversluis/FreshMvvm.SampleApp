@@ -1,5 +1,6 @@
 using App1.iOS.CustomRenderers;
 using App1.Pages;
+using System.Drawing;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
@@ -11,9 +12,10 @@ namespace App1.iOS.CustomRenderers
     {
         public override void ViewWillAppear(bool animated)
         {
-            ParentViewController.TabBarController.TabBar.Hidden = true;
-
             base.ViewWillAppear(animated);
+
+            ParentViewController.TabBarController.TabBar.Frame = new RectangleF((float)-1000, (float)-1000, (float)0, (float)0);
+            ParentViewController.TabBarController.TabBar.Hidden = true;
         }
     }
 }

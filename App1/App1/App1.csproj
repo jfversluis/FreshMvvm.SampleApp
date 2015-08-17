@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="MvvmContainers\MasterDetailNavigationContainer.cs" />
     <Compile Include="PageModels\AddPageModel.cs" />
     <Compile Include="PageModels\AddFormPageModel.cs" />
     <Compile Include="PageModels\OtherPageModel.cs" />

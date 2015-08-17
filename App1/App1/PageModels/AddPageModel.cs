@@ -1,4 +1,5 @@
-﻿using FreshMvvm;
+﻿using App1.MvvmContainers;
+using FreshMvvm;
 using Xamarin.Forms;
 
 namespace App1.PageModels
@@ -11,17 +12,11 @@ namespace App1.PageModels
             {
                 return new Command(async () =>
                {
-                   // Keep reference to main app navigation service
-                   var nav = FreshIOC.Container.Resolve<IFreshNavigationService>();
-
-                   var addIndicationFormPage = new FreshMasterDetailNavigationContainer();
+                   var addIndicationFormPage = new MasterDetailNavigationContainer();
                    addIndicationFormPage.Init("Menu");
                    addIndicationFormPage.AddPage<AddFormPageModel>("Tab 1");
 
-                   await nav.PushPage(addIndicationFormPage, null);
-
-                   // Restore main app navigation service
-                   FreshIOC.Container.Register(nav);
+                   await FreshIOC.Container.Resolve<IFreshNavigationService>().PushPage(addIndicationFormPage, null);
                });
             }
         }
